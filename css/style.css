@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--Light-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Manrope", sans-serif;
+    font-size: 1.3rem;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    height: 100vh;  
+    width: 100vw;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: .8rem;
+    margin: 0 auto;
+    height: 514px;
+    width: 328px;
+}
+.card__img img {
+    border-radius: .8rem .8rem 0 0;
+    height: 20.2rem;
+    width: 100%;
+}
+.card__info {
+    padding: 4.2rem 0 2rem 0;
+}
+.card__info h1 {
+    color: var(--Very-Dark-Grayish-Blue);
+    margin: 0 3.2rem 0 3.2rem;
+    margin-bottom: 2.2rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.card__info p {
+    text-align: left;
+    color: var(--Desaturated-Dark-Blue);
+    margin: 0 3.2rem 0 3.2rem;
+    margin-bottom: 3.4rem;
+    font-size: 1.3rem;
+}
+.card__footer {
+    display: flex;
+    gap: 1.8rem;
+    align-items: center;
+    margin: 0 3.2rem 2rem 3.2rem;
+}
+.card__footer img {
+    border-radius: 50%;
+    width: 4.2rem;
+}
+.container__name-user {
+    margin-right: 3rem;
+}
+.container__name-user p {
+    color: var(--Very-Dark-Grayish-Blue);
+    font-weight: 700;
+    margin: 0;
+}
+.container__name-user span {
+    color: var(--Grayish-Blue);
+    font-weight: 500;
+}
+#btn_activa_footer_desktop {
+    display: none;
+}
+.card__footer button {
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    padding: 1rem;
+}
+.tooltipText {
+    visibility: visible;
+    width: 25rem;
+    height: 5.6rem;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    color: #fff;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+  
+    /* Positioning */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%; /* Poner el tooltip arriba del elemento */
+    left: 50%;
+    margin-left: -12.8rem; /* Centrando el tooltip */
+    
+    /* Optional: animation */
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.tooltipText  p {
+    color: var(--Grayish-Blue);
+    margin: 0;
+}
+.fa-solid {
+    font-size: 1.6rem;
+}
+.card__footer2 {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    border-radius: 0 0 .8rem .8rem;
+    display: none;
+    gap: 1.8rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.2rem;
+    height: 7.4rem;
+}
+.card__footer2 div {
+    display: flex;
+    justify-content: space-between;
+    width: 9.6rem;
+}
+.card__footer2 p {
+    color: var(--Grayish-Blue);
+    margin: 0;
+}
+.card__footer2 button {
+    background-color: var(--Desaturated-Dark-Blue);
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+}
+.card__footer2 button .fa-solid {
+    color: white;
+}
+.fa-brands {
+    color: white;
+    font-size: 1.6rem;
+}
+/* -----------Footer------------------ */
+.attribution { font-size: 1.3rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@media screen and (min-width: 90rem) {
+    .card {
+        flex-direction: row;
+        height: 28.2rem;
+        width: 73.2rem;
+    }
+    .card__img img {
+        border-radius: .8rem 0 0 .8rem;
+        height: 100%;
+        width: 28.7rem;
+    }
+    .card__info p {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+    }
+    .container__name-user {
+        margin-right: 13rem;
+    }
+    .container__name-user p {
+        margin: 0;
+    }
+    .tooltipText p {
+        margin: 0;
+    }
+    #btn_activa_footer_light {
+        display: none;
+    }
+    #btn_activa_footer_desktop {
+        display: inline-block;
+    }
+    /* .card__footer button:hover .tooltipText {
+        visibility: visible;
+        opacity: 1;
+    } */
+}
